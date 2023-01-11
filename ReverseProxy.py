@@ -94,7 +94,7 @@ def ip():
 
    # changeIp = input('What is the current IP: ')
 
-   with in_place.InPlace('/etc/nginx/sites-enables/default') as file:
+   with in_place.InPlace('/etc/nginx/sites-enabled/default') as file:
     for line in file:
 
 
