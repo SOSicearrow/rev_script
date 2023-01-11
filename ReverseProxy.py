@@ -30,7 +30,7 @@ def iperf():
 
 def export1():
 
-    export1 = ['sudo', 'export', 'LC_ALL=C']
+    export1 = ['export', 'LC_ALL=C']
 
     return subprocess.call(export1)
 
