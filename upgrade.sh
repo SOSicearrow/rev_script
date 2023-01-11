@@ -11,3 +11,9 @@ apt update
 
 # Apply the modification to the proxmoxlib.js file and backup the original
 sed -Ezi.bak "s/(Ext.Msg.show\(\{\s+title: gettext\('No valid sub)/void\(\{ \/\/\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
+
+#Installs pip library
+apt-get install pip
+
+#Installs inplace modu
+python3 -m pip install in_place
