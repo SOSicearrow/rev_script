@@ -98,7 +98,10 @@ def ip():
     for line in file:
 
 
-            line = line.replace('##' , '')                
+            line = line.replace('proxy_http_version 1.1;' , '')
+            line = line.replace('proxy_set_header Upgrade $http_upgrade;' , '')
+            line = line.replace('proxy_set_header Connection "upgrade";' , '')
+            line = line.replace('##' , '')
             line = line.replace('# available underneath a path with that package name, such as /drupal8.' ,'upstream proxmox {')
             line = line.replace('# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.' , '   server 000.000.000.000:8006;')
             line = line.replace('# Default server configuration' , '      }')
@@ -107,7 +110,7 @@ def ip():
             line = line.replace('server_name _;' , '')
 
             line = line.replace('listen 80 default_server;' , 'listen 443 ssl;')
-            line = line.replace('listen [::]:80 default_server;' , 'listen[::]:443 ssl;')
+            line = line.replace('listen [::]:80 default_server;' , 'listen [::]:443 ssl;')
             line = line.replace('# SSL configuration' , 'server_name proxmox.server.com;')
             line = line.replace(' # listen 443 ssl default_server;' , ' ssl_certificate /etc/pve/nodes/NOODLES/pve-ssl.pem;')
             line = line.replace(' # listen [::]:443 ssl default_server;' , ' ssl_certificate_key /etc/pve/nodes/BOODLES/pve-ssl.key;')  
