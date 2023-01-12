@@ -30,7 +30,7 @@ def iperf():
 
 def export1():
 
-os.environ['LC_ALL'] = 'C'
+    os.environ['LC_ALL'] = 'C'
 
 def  locale():
 
