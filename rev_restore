@@ -1,7 +1,7 @@
 import os
 
 # Define the path to the default file
-file_path = '/home/jhh78/plaintext'
+file_path = '/etc/nginx/sites-enabled/default'
 
 # Check if the file exists
 if os.path.exists(file_path):
